@@ -24,10 +24,18 @@ then so part P, and Q, individually. That's all we
 need to say to precisely define "what and means" in
 propositional, and many other, logics.
 -/
-
+-- AND- how and should behave
 def and_intro := R ⇒ Q ⇒ R ∧ Q
 def and_elim_left := R ∧ Q ⇒ R
 def and_elim_right := R ∧ Q ⇒ Q
+
+-- introduced polymorphic type builder for AND
+-- type builder AND, takes two smaller types and takes AND as conjunction of those two arguments
+-- one polymorphic type in leiu of a bunch of special cases
+-- how to map this rule of reasoning into lean type theory?
+-- Prop is type of And
+
+#check And
 
 def or_intro_left := R ⇒ R ∨ Q
 def or_intro_right :=  Q ⇒ R ∨ Q
